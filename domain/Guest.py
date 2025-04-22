@@ -2,7 +2,7 @@ from domain.User import User
 
 class Guest(User):
 
-    def __init__(self, id, name, last_name, email, password , status, origin, occupation):
+    def __init__(self, id, name, email, password , status, origin, occupation):
         super().__init__(id, name, email, password, status)
         self._origin = origin
         self._occupation = occupation
