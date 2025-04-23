@@ -1,6 +1,6 @@
 class User:
 
-    def __init__(self, id, name, last_name , email , password , status):
+    def __init__(self, id, name , email , password , status):
         self._id = id
         self._name = name
         self._email = email
@@ -22,14 +22,6 @@ class User:
     @name.setter
     def name(self, name):
         self._name= name
-
-    @property
-    def last_name(self):
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        self._last_name = last_name
 
     @property
     def email(self):

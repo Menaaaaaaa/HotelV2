@@ -3,8 +3,8 @@ from domain.User import User
 
 class Employee(User):
 
-    def __init__(self, id, name, last_name , email , password , status, rol):
-        super().__init__(id, name, last_name, email, password, status)
+    def __init__(self, id, name, email , password , status, rol):
+        super().__init__(id, name, email, password, status)
         self.rol = rol
 
     @property
