@@ -2,12 +2,12 @@ from domain.Employee import Employee
 from data.EmployeeRepository import EmployeeRepository
 
 class EmployeeService:
-    def _init_(self, db):
+    def __init__(self, db):
         self.db = db
         self.employee_repository = EmployeeRepository()
 
     def create_employee(self):
- 
+
         idUser = input("Ingrese la identificación del empleado (idUser): ")
         name = input("Ingrese el nombre del empleado: ")
         email = input("Ingrese el correo del empleado: ")
@@ -42,7 +42,7 @@ class EmployeeService:
             print("No hay empleados registrados.")
 
     def delete_employee(self):
-  
+
         idUser = input("Ingrese la identificación del empleado (idUser) que desea eliminar: ")
 
         query_check_employee = "SELECT * FROM Employee WHERE idUser = %s"
