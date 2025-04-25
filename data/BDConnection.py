@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 
 class Conexion:
-    def _init_(self, host, port, user, password, database):
+    def __init__(self, host, port, user, password, database):
         self.host = host
         self.port = port
         self.user = user
@@ -46,7 +46,7 @@ class Conexion:
             if query.strip().lower().startswith('select'):
                 result = cursor.fetchall()
                 if not result:
-                    print(" No hay resultados.")
+                    print("")
                     return None
                 return result
         except Error as err:
